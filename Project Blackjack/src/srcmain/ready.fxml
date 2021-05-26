@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="readybg" stylesheets="@readybg.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="srcmain.ReadyController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+   <left>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="iconback" onMouseClicked="#goBackHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/iconback.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <Label text="Ready to Start" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="70.0" />
+         </font>
+         <effect>
+            <Glow level="0.72" />
+         </effect>
+      </Label>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="97.0" prefWidth="1240.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="1067.0" layoutY="40.0" text="Start  the Game!" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <effect>
+                  <Glow level="0.72" />
+               </effect>
+            </Label>
+            <ImageView fx:id="startButton" layoutX="1175.0" layoutY="24.0" onMouseClicked="#goPlay" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@pics/iconback.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="453.0" layoutY="292.0" prefHeight="100.0" prefWidth="385.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" text="Role:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.78" />
+                     </effect>
+                  </Label>
+                  <RadioButton fx:id="dealerRadioButton" mnemonicParsing="false" onAction="#dealerButtonSelected" text="Dealer" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton fx:id="playerRadioButton" mnemonicParsing="false" onAction="#playerButtonSelected" text="Player" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="352.0" layoutY="76.0" prefHeight="100.0" prefWidth="385.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" text="Username:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="usernameLabel" alignment="CENTER" text="user" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="368.0" layoutY="150.0" prefHeight="100.0" prefWidth="385.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" text="Money:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="moneyLabel" alignment="CENTER" text="\$$$" textFill="#ffeb00">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.59" />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="443.0" layoutY="218.0" prefHeight="100.0" prefWidth="385.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" text="Bet$:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="betTextField" text="100" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="422.0" layoutY="366.0" prefHeight="100.0" prefWidth="385.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" text="Hardness:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.78" />
+                     </effect>
+                  </Label>
+                  <RadioButton fx:id="easyRadioButton" mnemonicParsing="false" onAction="#easyButtonSelected" prefHeight="22.0" prefWidth="87.0" text="Easy" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton fx:id="hardRadioButton" mnemonicParsing="false" onAction="#hardButtonSelected" text="Hard" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
